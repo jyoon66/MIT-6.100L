@@ -227,3 +227,116 @@ float
 * Syntax for a simple expression
   * `<object> <operator> <object>`
 
+## BIG IDEA
+* **Replace complex expressions by ONE value**
+* Work systematically to evaluate the expression.
+
+## Examples
+* > 3 + 2
+  * 5
+* > (4+2) * 6-1
+  * 35
+* > type((4+2) * 6-1)
+  * int
+* > float((4+2) * 6-1)
+  * 35.0
+
+![alt text](image-16.png)
+
+## You Try It!
+* In your console, find the values of the following expressions:
+  * (13-4) / (12*12)
+    * 0.0625
+  * type(4*3)
+    * int
+  * type(4.0*3)
+    * float
+  * int(1/2)
+    * 0
+
+## Operators on `int` and `float`
+* `i+j` => the **sum**
+* `i-j` => the **difference**
+* `i*j` => the **product**
+  * For sum, difference, product => If both are ints, result is int
+  * If either or both are floats, resu;t is float
+* `i/j` => division
+  * result is always a float
+* `i//j` => **floor division**
+  * What is the type of output?
+    * int
+* `i%j` => the **remainder** when `i` is divided by `j`
+* `i**j` => `i` to the **power** of `j`
+
+## Simple Operations
+* Parentheses tell Python to do these operations first 
+  * Like math!
+* **Operator precedence** without parentheses
+  * `**`
+  * `* / %` => executed left to right, as appear in expression
+  * `+ -` => executed left to right, as appear in expression
+
+## So Many Objects, what to do with them?!
+![alt text](image-17.png)
+
+## Variables
+* Computer science variables are **different** than math variables
+* **Math variables**
+  * Abstract
+  * Can **represent many values**
+  * ![alt text](image-18.png)
+* **CS variables**
+  * Is bound to **one single value** at a given time
+  * Can be bound to an expression (but expressions evaluate to one value!)
+  * ![alt text](image-19.png)
+
+## Binding Variables to Values
+* In CS, the equal sign is an **assignment**
+  * One value to one variable name
+  * Equal sign is **not equality**, not "solve for x"
+* An assignment binds a value to a name
+  * pi **(variable)** = 355 / 113 **(value)**
+  * **Step 1:** Compute the value on the **right hand side** (the VALUE)
+    * Value stored in computer memory
+  * **Step 2:** Store it (bind it) to the **left hand side** (the VARIABLE) 
+    * Retrieve value associated with name by invoking the name (typing it out)
+
+## You Try It!
+* Which of these are allowed in Python? Type them in the console to check.
+  * `x = 6`
+    * Yes
+  * `6 = x`
+    * No
+  * `x*y = 3+4`
+    * No
+  * `xy = 3+4`
+    * Yes
+
+## Abstracting Expressions
+* Why **give names** to values of experssions?
+  * To **reuse names** instead of values
+  * Makes code easier to read and modify
+* Choose variable names wisely
+  * Code needs to read
+  * Today, tomorrow, next year
+  * By you and others
+  * You'll be find if you stick to letters, underscores, don't start with a number
+
+```py
+# Compute approximate value for pi
+pi = 355/113
+radius = 2.2
+area = pi * (radius**2)
+circumference = pi * (radius*2)
+```
+
+![alt text](image-20.png)
+
+## What is Best Code Style?
+![alt text](image-21.png)
+
+## Change Bindings
+* Can **re-bind** varaible names using new assignment statements
+* Previous value may still stored in memory but lost the handle for it
+* Value for **area does not change** until you tell the computer to do the calculation again
+![alt text](image-22.png)
