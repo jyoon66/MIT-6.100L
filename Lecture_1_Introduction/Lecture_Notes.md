@@ -340,3 +340,48 @@ circumference = pi * (radius*2)
 * Previous value may still stored in memory but lost the handle for it
 * Value for **area does not change** until you tell the computer to do the calculation again
 ![alt text](image-22.png)
+
+## BIG IDEA
+* **Lines are evaluated one after the other**
+* No skipping around, yet.
+* We'll see how lines can be skipped/repeated later.
+
+## You Try It!
+* These 3 lines are executed in order. What are the values of `meters` and `feet` variables at each line in the code?
+```py
+meters = 100             # meters => 100, feet => N/A
+feet = 3.2808 * meters   # meters => 100,feet => 328.08
+meters = 200             # meters => 200, feet => 328.08
+```
+* Swap values of x and y without binding the numbers directly. Debug (aka fix) this code.
+```py
+x = 1
+y = 2
+
+y = x
+x = y
+```
+
+![alt text](image-23.png)
+
+* **Answer:**
+```py
+x = 1
+y = 2
+
+temp = y # 2
+y = x    # 1
+x = temp # 2
+```
+
+## Summary
+* Objects
+  * Objects in memory have **types**.
+  * Types tell Python what **operations** you can do with the objects.
+  * **Expressions evaluate to one value** and involve objects and operations.
+  * Variables bind names to objects.
+  * `=` sign is an assignment, for ex. `var = type(5*4)`
+* Programs
+  * Programs only **do what you tell them to do**.
+  * Lines of code are executed **in order**.
+  * Good variable names and comments help you **read code later**.
